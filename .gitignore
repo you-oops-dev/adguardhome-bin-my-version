@@ -1,0 +1,8 @@
+# This file is used to ignore files which are generated
+#Dir
+/pkg
+/src
+#Files
+*.pkg.tar.xz
+*.pkg.tar.zst
+AdGuardHome-*.gz
