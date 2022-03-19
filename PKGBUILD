@@ -25,12 +25,12 @@ source_armv7h=("${_pkgname}-${pkgver}.tar.gz::${_releaseurl}/${_pkgname}_linux_a
 
 sha256sums=('SKIP'
             'SKIP')
-sha256sums_i686=('c1dce3ecff87866eb98b9858e25d93cb8f3a5b8ef772867266709bcf1f4fa2ba')
-sha256sums_x86_64=('c1dce3ecff87866eb98b9858e25d93cb8f3a5b8ef772867266709bcf1f4fa2ba')
-sha256sums_aarch64=('c1dce3ecff87866eb98b9858e25d93cb8f3a5b8ef772867266709bcf1f4fa2ba')
-sha256sums_armv5h=('c1dce3ecff87866eb98b9858e25d93cb8f3a5b8ef772867266709bcf1f4fa2ba')
-sha256sums_armv6h=('c1dce3ecff87866eb98b9858e25d93cb8f3a5b8ef772867266709bcf1f4fa2ba')
-sha256sums_armv7h=('c1dce3ecff87866eb98b9858e25d93cb8f3a5b8ef772867266709bcf1f4fa2ba')
+sha256sums_i686=('b1941ef2b3580f48014a935e5d2fb885baa84f99d415b910488ddce95b90382f')
+sha256sums_x86_64=('b1941ef2b3580f48014a935e5d2fb885baa84f99d415b910488ddce95b90382f')
+sha256sums_aarch64=('b1941ef2b3580f48014a935e5d2fb885baa84f99d415b910488ddce95b90382f')
+sha256sums_armv5h=('b1941ef2b3580f48014a935e5d2fb885baa84f99d415b910488ddce95b90382f')
+sha256sums_armv6h=('b1941ef2b3580f48014a935e5d2fb885baa84f99d415b910488ddce95b90382f')
+sha256sums_armv7h=('b1941ef2b3580f48014a935e5d2fb885baa84f99d415b910488ddce95b90382f')
 
 package() {
     install -Dm755 "${_pkgname}/${_pkgname}" "${pkgdir}/var/lib/adguardhome/${_pkgname}"
