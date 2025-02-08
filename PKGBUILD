@@ -1,5 +1,5 @@
 # Maintainer: Marc Vidal <mvidaldp@gmail.com>
-# Unofficial Maintainer: naruto522ru <The profile (AUR) has all the contacts for communication or write to GitHub>
+# Unofficial Maintainer: you-oops-dev <The profile (AUR) has all the contacts for communication or write to GitHub>
 
 pkgname=adguardhome-bin
 _pkgname=AdGuardHome
