@@ -40,5 +40,5 @@ package() {
     install -Dm644 "${_pkgname}.service" "${pkgdir}/usr/lib/systemd/system/${_pkgname}.service"
     install -Dm644 "${srcdir}/sysusers.conf" "${pkgdir}/usr/lib/sysusers.d/${_pkgname}.conf"
     install -Dm644 "${srcdir}/tmpfiles.conf" "${pkgdir}/usr/lib/tmpfiles.d/${_pkgname}.conf"
-    install -Dm644 "${srcdir}/adguard-cert.sh" "${pkgdir}/usr/bin/adguard-cert.sh"
+    install -Dm755 "${srcdir}/adguard-cert.sh" "${pkgdir}/usr/bin/adguard-cert.sh"
 }
