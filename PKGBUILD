@@ -5,7 +5,7 @@ pkgname=adguardhome-bin
 _pkgname=AdGuardHome
 pkgver=0.107.63
 _pkgver="v${pkgver}"
-pkgrel=1
+pkgrel=2
 pkgdesc='Network-wide ads and trackers blocking DNS server (binary version).'
 arch=('i686' 'x86_64' 'aarch64' 'armv5h' 'armv6h' 'armv7h')
 url='https://github.com/AdguardTeam/AdGuardHome'
@@ -40,5 +40,5 @@ package() {
     install -Dm644 "${_pkgname}.service" "${pkgdir}/usr/lib/systemd/system/${_pkgname}.service"
     install -Dm644 "${srcdir}/sysusers.conf" "${pkgdir}/usr/lib/sysusers.d/${_pkgname}.conf"
     install -Dm644 "${srcdir}/tmpfiles.conf" "${pkgdir}/usr/lib/tmpfiles.d/${_pkgname}.conf"
-    install -Dm755 "${srcdir}/adguard-cert.sh" "${pkgdir}/usr/bin/adguard-cert.sh"
+    install -Dm755 "${srcdir}/adguard-cert.sh" "${pkgdir}/usr/local/bin/adguard-cert.sh"
 }
