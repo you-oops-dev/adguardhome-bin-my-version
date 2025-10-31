@@ -3,11 +3,11 @@
 
 pkgname=adguardhome-bin
 _pkgname=AdGuardHome
-pkgver=0.107.63
+pkgver=0.107.69
 _pkgver="v${pkgver}"
-pkgrel=2
+pkgrel=1
 pkgdesc='Network-wide ads and trackers blocking DNS server (binary version).'
-arch=('i686' 'x86_64' 'aarch64' 'armv5h' 'armv6h' 'armv7h')
+arch=('i686' 'x86_64')
 url='https://github.com/AdguardTeam/AdGuardHome'
 license=('GPL')
 provides=("${pkgname}")
@@ -17,23 +17,16 @@ _releaseurl="${url}/releases/download/${_pkgver}"
 source=(sysusers.conf tmpfiles.conf AdGuardHome.service adguard-cert.sh)
 options=('!strip' '!debug')
 
-source_i686=("${_pkgname}-${pkgver}.tar.gz::${_releaseurl}/${_pkgname}_linux_386.tar.gz")
-source_x86_64=("${_pkgname}-${pkgver}.tar.gz::${_releaseurl}/${_pkgname}_linux_amd64.tar.gz")
-source_aarch64=("${_pkgname}-${pkgver}.tar.gz::${_releaseurl}/${_pkgname}_linux_arm64.tar.gz")
-source_armv5h=("${_pkgname}-${pkgver}.tar.gz::${_releaseurl}/${_pkgname}_linux_armv5.tar.gz")
-source_armv6h=("${_pkgname}-${pkgver}.tar.gz::${_releaseurl}/${_pkgname}_linux_armv6.tar.gz")
-source_armv7h=("${_pkgname}-${pkgver}.tar.gz::${_releaseurl}/${_pkgname}_linux_armv7.tar.gz")
+source_i686=("${_pkgname}-${pkgver}-i686.tar.gz::${_releaseurl}/${_pkgname}_linux_386.tar.gz")
+source_x86_64=("${_pkgname}-${pkgver}-x86_64.tar.gz::${_releaseurl}/${_pkgname}_linux_amd64.tar.gz")
+
+sha256sums_i686=('9846d676fe8af9a75293f72710f4d825e7847162dc44e617e1ef3b4b5f6a8f0e')
+sha256sums_x86_64=('36d82638a30d436d18db3e6f8aaeabe8d5f684e0d451127b8d18d5553a3e5325')
 
 sha256sums=('SKIP'
             'SKIP'
             'SKIP'
             'SKIP')
-sha256sums_i686=('d1f370e6e0ef7150bbe8762125d04fb8fff55164916f033a04b0be420ad510e1')
-sha256sums_x86_64=('d1f370e6e0ef7150bbe8762125d04fb8fff55164916f033a04b0be420ad510e1')
-sha256sums_aarch64=('d1f370e6e0ef7150bbe8762125d04fb8fff55164916f033a04b0be420ad510e1')
-sha256sums_armv5h=('d1f370e6e0ef7150bbe8762125d04fb8fff55164916f033a04b0be420ad510e1')
-sha256sums_armv6h=('d1f370e6e0ef7150bbe8762125d04fb8fff55164916f033a04b0be420ad510e1')
-sha256sums_armv7h=('d1f370e6e0ef7150bbe8762125d04fb8fff55164916f033a04b0be420ad510e1')
 
 package() {
     install -Dm755 "${_pkgname}/${_pkgname}" "${pkgdir}/var/lib/adguardhome/${_pkgname}"
